@@ -1,0 +1,411 @@
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal
+}
+
+ul {
+  list-style: none
+}
+
+button,
+input,
+select {
+  margin: 0
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%
+}
+
+iframe {
+  border: 0
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+td,
+th {
+  padding: 0
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  /* height: 100vh; */
+  min-height: 100vh;
+
+  font-family: 'Gilroy';
+  font-size: 18px;
+  color: #FFF;
+}
+
+/** / футер прикріплений до низу сайту  body {display: flex;flex-direction: column;height: 100vh;min-height: 100vh;} */
+main {
+  flex: 1 0 auto;
+}
+
+/** /контейнер для центрування контенту, розміри згідно макету/ */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  /* padding-left: 15px;
+  padding-right: 15px; */
+  width: 1462px;
+}
+
+.header {
+  height: 2477px;
+  width: 100%;
+  background-color: #0B1D26;
+  background-image:
+    linear-gradient(347deg, rgba(11, 29, 38, 0.00) 0%, #0B1D26 100%),
+    url(img/HG.png),
+    url(img/MG.png),
+    linear-gradient(180deg, rgba(11, 29, 38, 0.00) 0%, #0B1D26 72.28%),
+    url(img/VG.png);
+  background-size:
+    100% 100%,
+    auto,
+    auto,
+    100% 100%,
+    auto;
+  ;
+  background-repeat: no-repeat;
+  background-position: center top, center top, center top 849px, center bottom -800px, center bottom;
+  position: relative;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 153px;
+  width: 100%;
+  max-width: 1920px;
+  padding: 64px 80px;
+  margin: 0 auto;
+  font-weight: 700;
+}
+
+.nav a {
+  color: #FFF;
+}
+
+.nav>a:hover {
+  color: #FBD784;
+}
+
+.logo {
+  font-family: "Chronicle Display";
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0.32px;
+  text-transform: capitalize;
+}
+
+.nav-list {
+  display: flex;
+  column-gap: 40px;
+}
+
+.nav-item {
+  display: flex;
+}
+
+.nav-item:hover a {
+  color: #FBD784;
+}
+
+/* ==========================================header-content =======================/ */
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 950px;
+  gap: 32px;
+  margin: 0 auto;
+  margin-top: 200px;
+}
+
+.header-content-text {
+  color: #FBD784;
+  font-family: "Gilroy";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  position: relative;
+  padding-left: 104px;
+}
+
+.header-content-text::before {
+  content: "";
+  width: 72px;
+  height: 2px;
+  background-color: #FBD784;
+  display: block;
+  margin-right: 32px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.header-content-title {
+  color: #FFF;
+  font-family: "Chronicle Display";
+  font-size: 88px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.13;
+  text-transform: capitalize;
+}
+
+.header-content-scroll {
+  color: #FFF;
+  font-family: Gilroy;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.header-content-scroll::after {}
+
+/* .layer {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  z-index: -10;
+}
+
+.layer1 {
+  height: 100vh;
+  background-image: url(img/HG.png);
+  background-position: center top;
+  background-size: 1920px 1200px;
+  animation: animateLayer1 3s ease-in-out forwards 1;
+}
+
+.layer2 {
+  height: 100vh;
+  background-image: url(img/MG.png);
+  background-position: center top 849px;
+  background-size: 1920px 100;
+  animation: animateLayer2 3s ease-in-out forwards 1;
+}
+
+.layer3 {
+  height: 100vh;
+  background-image: url(img/VG.png);
+  background-position: center bottom;
+  background-size: 1920px 926px;
+  animation: animateLayer3 3s ease-in-out forwards 1;
+}
+
+@keyframes animateLayer1 {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes animateLayer2 {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes animateLayer3 {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+} */
+
+/* ====================================== main =============================== */
+.main {
+  /* height: 100vh; */
+  background-color: #0B1D26;
+
+  /* Shadow */
+  box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.20);
+  display: flex;
+  flex-direction: column;
+  row-gap: 200px;
+}
+
+/* ========================================= section_01 ============================= */
+.section_01 {
+  z-index: 1;
+  position: relative;
+  margin-top: -297px;
+
+}
+
+.section_01-wrap {
+  display: flex;
+  column-gap: 114px;
+}
+
+.section_01-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 27px;
+  /* padding: 140px 0 140px 150px; */
+}
+
+.section_01-content::before {
+  content: '01';
+  font-size: 240px;
+  font-weight: 700;
+  line-height: 1;
+  opacity: 0.1;
+
+}
+
+.sub-text {
+  position: relative;
+  color: #FBD784;
+  font-weight: 800;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  padding-left: 96px;
+}
+
+.sub-text::before {
+  content: "";
+  width: 72px;
+  height: 2px;
+  background-color: #FBD784;
+  display: block;
+  margin-right: 32px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+
+.title {
+  font-family: Chronicle Display;
+  font-size: 64px;
+}
+
+.text {
+  font-weight: 700;
+  line-height: 1.77;
+}
+
+.more {
+  color: #FBD784;
+  font-family: Gilroy;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+
+
+
+/* ========================================= section_02 ============================= */
+.section_02-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 27px;
+}
+
+.section_02-content::before {
+  content: '02';
+  font-size: 240px;
+  font-weight: 700;
+  line-height: 1;
+  opacity: 0.1;
+
+}
+
+.section_02-wrap {
+  display: flex;
+  column-gap: 264px;
+}
+
+/* ========================================= section_03 ============================= */
+.section_03-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 27px;
+}
+
+.section_03-content::before {
+  content: '03';
+  font-size: 240px;
+  font-weight: 700;
+  line-height: 1;
+  opacity: 0.1;
+
+}
+
+.section_03-wrap {
+  display: flex;
+  column-gap: 114px;
+}

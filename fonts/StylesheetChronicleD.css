@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'Chronicle Display';
+    src: url('./chronicle-display-semibold/Chronicle-Display-Semibold.woff') format('woff'),
+    url('./chronicle-display-semibold/Chronicle_Display_Semibold.otf') format('otf');
+    font-weight: 600;
+  }
+
+@font-face {
+    font-family: 'Chronicle Display';
+    src: url('./chronicle-display-bold/Chronicle-Display-Bold.woff') format('woff'),
+    url('./chronicle-display-bold/Chronicle_Display_Bold.otf') format('otf');
+    font-weight: 700;
+  }
+
+ 
