@@ -84,6 +84,7 @@ body {
   font-family: 'Gilroy';
   font-size: 18px;
   color: #FFF;
+  background-color: #0B1D26;
 }
 
 /** / футер прикріплений до низу сайту  body {display: flex;flex-direction: column;height: 100vh;min-height: 100vh;} */
@@ -101,10 +102,10 @@ main {
 }
 
 .header {
-  height: 2477px;
+  height: 2090px;
   width: 100%;
-  background-color: #0B1D26;
-  background-image:
+  /* background-color: #0B1D26; */
+  /* background-image:
     linear-gradient(347deg, rgba(11, 29, 38, 0.00) 0%, #0B1D26 100%),
     url(img/HG.png),
     url(img/MG.png),
@@ -119,7 +120,7 @@ main {
   ;
   background-repeat: no-repeat;
   background-position: center top, center top, center top 849px, center bottom -800px, center bottom;
-  position: relative;
+  position: relative; */
 }
 
 .nav {
@@ -221,35 +222,44 @@ main {
 
 .header-content-scroll::after {}
 
-/* .layer {
+.layer {
   position: absolute;
 
   top: 0;
   left: 0;
   background-repeat: no-repeat;
-  z-index: -10;
+  z-index: -1;
 }
 
 .layer1 {
-  height: 100vh;
-  background-image: url(img/HG.png);
+  width: 100%;
+  height: 100%;
+
+  background-image: linear-gradient(347deg,
+      rgba(11, 29, 38, 0.00) 0%,
+      #0B1D26 100%), url(img/HG.png);
   background-position: center top;
   background-size: 1920px 1200px;
   animation: animateLayer1 3s ease-in-out forwards 1;
 }
 
 .layer2 {
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-image: url(img/MG.png);
   background-position: center top 849px;
-  background-size: 1920px 100;
+  background-size: 1920px 1041px;
   animation: animateLayer2 3s ease-in-out forwards 1;
 }
 
 .layer3 {
-  height: 100vh;
-  background-image: url(img/VG.png);
-  background-position: center bottom;
+  width: 100%;
+  height: 100%;
+
+  background-image: linear-gradient(180deg,
+      rgba(11, 29, 38, 0.00) 0%,
+      #0B1D26 72.28%), url(img/VG.png);
+  background-position: center top 1168px;
   background-size: 1920px 926px;
   animation: animateLayer3 3s ease-in-out forwards 1;
 }
@@ -282,7 +292,7 @@ main {
   100% {
     transform: translateX(0);
   }
-} */
+}
 
 /* ====================================== main =============================== */
 .main {
